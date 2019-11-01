@@ -5,10 +5,15 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
 </head>
+
+<div class="header">
+{% block buttons %}
+{% endblock buttons %}
+</div>
+
 <body>
-
 {% block content %}
-
 {% endblock content %}
 </body>
+
 </html>

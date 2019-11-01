@@ -1,26 +1,29 @@
 {% extends "_base.html" %}
 {% from "_macros.html" import do_flashes %}
 
+{% block buttons %}
+
+<div align="right">
+    <a class="headbutt" href="{{ url_for('index') }}">Home</a>
+    <a class="headbutt" href="{{ url_for('signup') }}">Sign Up</a>
+</div>
+
+{% endblock buttons %}
+
 
 {% block content %}
+<center>
+  <h1 align="center">Login</h1>
 
-    <div align="right">
-        <a href="{{ url_for('index') }}">Home</a><br>
-        <a href="{{ url_for('signup') }}">Sign Up</a>
-    </div>
+  {{ do_flashes() }}
+  <form method="post">
+      <label for="username">Username:</label>
+      <input id="username" name="username" type="text"><br><br>
 
-    <h1 align="center">Login</h1>
+      <label for="password">Password:</label>
+      <input id="password" name="password" type="password"><br><br>
 
-    {{ do_flashes() }}
-
-    <form method="post">
-        <label for="username">Username:</label>
-        <input id="username" name="username" type="text"><br><br>
-
-        <label for="password">Password:</label>
-        <input id="password" name="password" type="password"><br><br>
-
-        <input type="submit" value="Log In!"> <br><br>
-    </form>
-
+      <input type="submit" value="Log In!"> <br><br>
+  </form>
+</center>
 {% endblock content %}

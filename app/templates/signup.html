@@ -2,13 +2,16 @@
 
 {% from "_macros.html" import do_flashes %}
 
+{% block buttons %}
+<div align="right">
+    <a class="headbutt" href="{{ url_for('index') }}">Home</a>
+    <a class="headbutt" href="{{ url_for('login') }}">Log In</a>
+</div>
+
+{% endblock buttons %}
+
 {% block content %}
-
-    <div align="right">
-        <a href="{{ url_for('index') }}">Home</a><br>
-        <a href="{{ url_for('login') }}">Log In</a>
-    </div>
-
+<center>
     <h1 align="center">Sign Up</h1>
 
     {{ do_flashes() }}
@@ -25,5 +28,5 @@
 
         <input type="submit" value="Sign Up!">
     </form>
-
+</center>
 {% endblock content %}
