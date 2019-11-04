@@ -1,15 +1,18 @@
 {% extends "_base.html" %}
 {% from "_macros.html" import do_flashes %}
 
+{% block buttons %}
+
+<div align="right">
+    <a class="headbutt" href="{{ url_for('index') }}">Home</a>
+    <a class="headbutt" href="{{ url_for('stories') }}">Story Hub</a>
+    <a class="headbutt" href="{{ url_for('profile') }}">My Profile</a>
+    <a class="headbutt" href="{{ url_for('logout') }}">Log Out</a>
+</div>
+
+{% endblock buttons %}
 
 {% block content %}
-
-    <div align="right">
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('stories') }}">Story Hub</a>
-        <a href="{{ url_for('profile') }}">My Profile</a><br>
-        <a href="{{ url_for('logout') }}">Log Out</a>
-    </div>
 
     <h1 align="center">{{ to_render.username }}</h1>
 

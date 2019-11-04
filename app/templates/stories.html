@@ -1,12 +1,16 @@
 {% extends "_base.html" %}
 
+{% block buttons %}
+<div align="right">
+    <a class="headbutt" href="{{ url_for('index') }}">Home</a>
+    <a class="headbutt" href="{{ url_for('profile') }}">My Profile</a>
+    <a class="headbutt" href="{{ url_for('logout') }}">Log Out</a>
+</div>
+{% endblock buttons %}
+
 {% block content %}
 
-    <div align="right">
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('profile') }}">My Profile</a><br>
-        <a href="{{ url_for('logout') }}">Log Out</a>
-    </div>
+
     <h1>Stories</h1>
     <form method="post" action="/search">
         <input type="text" name="query">
