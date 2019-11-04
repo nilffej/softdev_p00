@@ -5,8 +5,8 @@
 {% block content %}
 
     <div align="right">
-        <a href="{{ url_for('index') }}">Home</a><br>
-        <a href="{{ url_for('logout') }}">Log Out</a>
+        <a  class="headbuttt" href="{{ url_for('index') }}">Home</a><br>
+        <a  class="headbuttt" href="{{ url_for('logout') }}">Log Out</a>
     </div>
 
     <h1 align="center">Welcome, {{ current_user.username }}!</h1>
@@ -48,4 +48,3 @@
     <p>Find {{ word }} <a href="{{ url_for('stories') }}">here</a>.</p>
 
 {% endblock content %}
-
